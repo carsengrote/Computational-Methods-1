@@ -1,3 +1,7 @@
+# BVP u'' + u = f(x) on domain [0,pi] with mixed boundary conditions
+# u'(0) - u(0) = 0 and u'(pi) + u(pi) = 0
+# Second order accurate
+
 import numpy as np
 
 def u(x):
