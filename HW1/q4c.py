@@ -1,3 +1,5 @@
+# Solving Poisson equation on a triangular domain with u(x) = 0 on the boundary
+
 import numpy as np
 
 def f(x,y):
