@@ -1,3 +1,5 @@
+# Finite difference approximation for f''(x) given using x1 < x2 < x3 < x4
+
 import numpy as np
 
 def f(x):
