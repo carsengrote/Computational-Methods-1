@@ -1,3 +1,6 @@
+# Newtons method to solve nonlinear BVP u''(x) - 80cos(u(x)) = 0
+# with u(0) = 0, u(1) = 10
+
 import numpy as np
 
 n = 100
