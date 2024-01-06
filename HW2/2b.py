@@ -1,3 +1,6 @@
+# Conjugate Gradient method to solve Poisson's equation on traingular domain
+# with Dirichilet BCs
+
 import numpy as np
 import sys
 
