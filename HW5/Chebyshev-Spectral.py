@@ -1,3 +1,6 @@
+# Chebyshev spectral method to solve BVP u_xx + u^5 = f
+# on non-periodic [-1,1] with Dirichilet BCs
+
 import numpy as np
 
 # Function written by Chris Rycroft
