@@ -1,3 +1,5 @@
+# Solving diffusion equaiton with 5 point FD approximation, euler timestep
+# Missing files owned by prof.
 
 import numpy as np
 import numpy as np
