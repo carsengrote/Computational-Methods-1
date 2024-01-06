@@ -1,3 +1,7 @@
+% Kuramoto–Sivashinsky equation u_t +αu_xx +βu_xxxx +u(u_x) = 0 on periodic domain [0, 2pi) solved
+% with spectral method and FFT with IC u(x,0) = exp(-10 - 11cos(x))
+
+
 L = 2*pi; % Length of the interval, [0,L]
 N = 256; % Number of points spatially
 h = L/N; % Space discretization to evaluate function at
