@@ -1,3 +1,5 @@
+# Solving 2D diffusion with Alternating Direction Implicit method
+
 import numpy as np
 
 h = .1
