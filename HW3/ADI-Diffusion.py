@@ -1,4 +1,5 @@
 # Solving 2D diffusion with Alternating Direction Implicit method
+# With Dirichilet BCs and IC u(x, y, 0) = sin(2πx)sin(2πy).
 
 import numpy as np
 
