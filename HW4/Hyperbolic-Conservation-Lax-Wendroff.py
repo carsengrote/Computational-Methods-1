@@ -1,3 +1,7 @@
+# Solving hyperbolic conservation equation q_t + [A(x)q]_x = 0
+# on periodic interval [0,2pi) with generalized
+# Lax-Wendroff finite volume method with ICs q(x,0)=exp(sinx+ (1/2)sin4x)
+
 import numpy as np
 import sys
 
