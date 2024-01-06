@@ -1,3 +1,7 @@
+# Solving linear advection  u_t + au_x = 0 with forward Euler in time
+# and second order, one sided derivative in space on periodic
+# interval [0,2pi) and IC u = exp(2 sin x) 
+
 import numpy as np
 # Interval is [0,2pi) with periodic BCs
 N = 40  # Grid points
