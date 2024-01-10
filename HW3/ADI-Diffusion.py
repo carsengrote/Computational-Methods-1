@@ -42,8 +42,6 @@ Dy = np.identity(points**2) + (k/2)*Dy
 M = np.linalg.multi_dot([DyInv,Dx,DxInv,Dy])
 
 for i in range(0,n):
-    #uStar = np.matmul(np.matmul(DxInv,Dy),u)
-    #u = np.matmul(np.matmul(DyInv,Dx),uStar)
     u = np.matmul(M,u)
     
 #for i in range(0,points):
@@ -54,12 +52,10 @@ error = 0
 for i in range(0,points+2):
     for j in range(0,points+2):
         if ((i == 0 or j == 0) or (i == points + 1 or j == points + 1)):
-            #print(j*h,i*h,0)
             continue
         else:
             error += np.abs(np.sin(2*np.pi*j*h)*np.sin(2*np.pi*i*h)*np.exp(-8*(np.pi**2)*T) - u[(i-1)*points + j-1])**2
             #print(np.sin(2*np.pi*j*h)*np.sin(2*np.pi*i*h)*np.exp(-8*(np.pi**2)*T), u[(i-1)*points + j-1])
-            
             #print(j*h, i*h, u[(i-1)*points + j-1])
 
 print(h,h*np.sqrt(error))
