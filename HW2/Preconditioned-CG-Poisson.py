@@ -64,23 +64,15 @@ def makeMinv(n):
                 A[getIndex(i,j,n)][getIndex(i+1,j-1,n)] = 2/(3*h**2) # down right
 
     blockSize = int(np.floor(np.sqrt(numPoints)))
-    #blockSize = int(np.floor(numPoints/2))
-    #fullInv = np.linalg.inv(A)
-    
     lastBlockSize = numPoints % blockSize
     numBlocks = int(np.floor(numPoints/blockSize))
     Minv = np.zeros((numPoints,numPoints))
-    #print(blockSize, lastBlockSize, numBlocks)
-    #M = np.zeros((numPoints,numPoints))
 
     for i in range(0,numBlocks):
         Minv[i*blockSize:(i+1)*blockSize,i*blockSize:(i+1)*blockSize] = np.linalg.inv(A[i*blockSize:(i+1)*blockSize,i*blockSize:(i+1)*blockSize])
-        #M[i*blockSize:(i+1)*blockSize,i*blockSize:(i+1)*blockSize] = A[i*blockSize:(i+1)*blockSize,i*blockSize:(i+1)*blockSize]
         
-
     if lastBlockSize > 0:
         Minv[numBlocks*blockSize:,numBlocks*blockSize:] = np.linalg.inv(A[numBlocks*blockSize:,numBlocks*blockSize:])
-        #M[numBlocks*blockSize:,numBlocks*blockSize:] = A[numBlocks*blockSize:,numBlocks*blockSize:]
         
     return Minv
 
@@ -128,7 +120,6 @@ for n in nValues:
         u = u + v*p
         rNew = r - v*z
 
-        #print(np.linalg.norm(rNew))
         if np.linalg.norm(rNew) < 10**(-10):
             t = 1
         
