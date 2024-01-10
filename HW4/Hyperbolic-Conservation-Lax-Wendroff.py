@@ -40,7 +40,6 @@ for mb in mValues:
     Ai = np.zeros(m)
     for i in range(0,m):
         q[i] = np.exp(np.sin((i+1/2)*h)+(1/2)*np.sin(4*(i+1/2)*h))
-        #q[i] = np.max(np.pi/2 - np.abs((i + 1/2)*h - np.pi),0)
         Ah[i] = A(i-1/2,h)
         Ai[i] = A(i,h)
 
@@ -49,9 +48,7 @@ for mb in mValues:
 
     sum = 0
     for i in range(0,m):
-        #print((i+1/2)*h, q[i])
         sum = sum + h*(((np.exp(np.sin((i+1/2)*h)+(1/2)*np.sin(4*(i+1/2)*h))) - q[i])**2)
-	#sum = sum + h*((np.max(np.pi/2 - np.abs((i+1/2)*h - np.pi),0) - q[i])**2)
 
     error = np.sqrt(sum)
     print(m,error)
