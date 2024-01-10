@@ -90,8 +90,6 @@ for i in range(1,n+1):
         if (u[locations[l,0],locations[l,1]]) >  10**(-4) and times[l] == 0:
             times[l] = i*k
 
-    #print(i*k,concentrations[n,0],concentrations[n,1],concentrations[n,2])
-
 u = u**(1/4)
 print("C: ", times[0], " Q: ", times[1], " T: ", times[2])
 
