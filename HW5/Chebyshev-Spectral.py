@@ -121,14 +121,11 @@ for N in nValues:
         deltaU = np.linalg.solve(gPrime(N,uk),g(N,uk))
         uk = uk - deltaU 
         itCount += 1
-        #print(error(uk,points,N))
-        #print(np.linalg.norm(g(N,uk)))
 
     print("# iterations: ", itCount)
     # for x in xValues:
     #     print(x,u(x),Pn(x, points,uk))
     #for i in range(0,N+1):
     #    print(points[i],u(points[i]),uk[i])
-    #print(uk) 
     print(N, l2Error(xValues, points, uk, dx))
 
